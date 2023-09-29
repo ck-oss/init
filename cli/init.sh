@@ -5,7 +5,7 @@ if [ -d ".git" ]; then
     pnpm exec husky set .husky/pre-commit "pnpm exec lint-staged"
     pnpm exec husky set .husky/commit-msg "pnpm exec commitlint --edit \$1"
 
-    pnpm add -D @commitlint/cli @commitlint/config-conventional @commitlint/cz-commitlint commitizen lint-staged
+    pnpm add -w -D @commitlint/cli @commitlint/config-conventional @commitlint/cz-commitlint commitizen lint-staged
 
     pnpm pkg set "scripts[commit]"="cz"
     pnpm pkg set "scripts[format:check]"="prettier --check \"**/*.{html,css,scss,js,cjs,mjs,jsx,ts,tsx,md,markdown,mdx,json,yml,yaml,gql,graphql}\""
