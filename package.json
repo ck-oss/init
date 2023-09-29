@@ -1,6 +1,6 @@
 {
   "name": "@ck-oss/init",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "description": "CK OSS init cli",
   "keywords": [
