@@ -19,8 +19,8 @@
     "url": "https://github.com/ckasidis"
   },
   "bin": {
-    "ck-init": "./scripts/init.sh",
-    "ck-init-lint": "./scripts/init-lint.sh"
+    "ck-init": "./cli/init.sh",
+    "ck-init-lint": "./cli/init-lint.sh"
   },
   "files": [
     "./eslint",
@@ -29,8 +29,8 @@
   ],
   "scripts": {
     "commit": "cz",
-    "format:check": "prettier --check \"*.{html,css,scss,js,cjs,mjs,jsx,ts,tsx,md,markdown,mdx,json,yml,yaml,gql,graphql}\"",
-    "format:fix": "prettier --fix \"*.{html,css,scss,js,cjs,mjs,jsx,ts,tsx,md,markdown,mdx,json,yml,yaml,gql,graphql}\"",
+    "format:check": "prettier --check \"**/*.{html,css,scss,js,cjs,mjs,jsx,ts,tsx,md,markdown,mdx,json,yml,yaml,gql,graphql}\"",
+    "format:fix": "prettier --fix \"**/*.{html,css,scss,js,cjs,mjs,jsx,ts,tsx,md,markdown,mdx,json,yml,yaml,gql,graphql}\"",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prepare": "husky install"
@@ -41,7 +41,9 @@
     ]
   },
   "lint-staged": {
-    "*.{html,css,scss,js,cjs,mjs,jsx,ts,tsx,md,markdown,mdx,json,yml,yaml,gql,graphql}": "prettier --write"
+    "*.{html,css,scss,js,cjs,mjs,jsx,ts,tsx,md,markdown,mdx,json,yml,yaml,gql,graphql}": [
+      "prettier --write"
+    ]
   },
   "config": {
     "commitizen": {
@@ -70,13 +72,9 @@
   "dependencies": {
     "@babel/core": "^7.23.0",
     "@babel/eslint-parser": "^7.22.15",
-    "@commitlint/cli": "^17.7.1",
-    "@commitlint/config-conventional": "^17.7.0",
-    "@commitlint/cz-commitlint": "^17.7.1",
     "@next/eslint-plugin-next": "^13.5.3",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
-    "commitizen": "^4.3.0",
     "eslint-config-next": "^13.5.3",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-turbo": "^1.10.14",
@@ -87,16 +85,20 @@
     "eslint-plugin-next-on-pages": "^1.6.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "lint-staged": "^14.0.1",
     "prettier-plugin-packagejson": "^2.4.5",
     "prettier-plugin-tailwindcss": "^0.5.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.2",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@commitlint/cz-commitlint": "^17.7.2",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@types/eslint": "^8.44.3",
+    "commitizen": "^4.3.0",
     "eslint": "^8.50.0",
     "husky": "^8.0.0",
+    "lint-staged": "^14.0.1",
     "prettier": "^3.0.3",
     "semantic-release": "^22.0.1"
   },
