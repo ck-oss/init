@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/ck-oss/init/compare/v1.0.2...v2.0.0) (2023-10-01)
+
+
+### Features
+
+* 2.0 release ([7ec7009](https://github.com/ck-oss/init/commit/7ec7009ca8ba63efaa670b7700d3ace6a278ef31))
+
+
+### BREAKING CHANGES
+
+* eslint, prettier, typescript configs are available as individual packages
+
 ## [1.0.2](https://github.com/ck-oss/init/compare/v1.0.1...v1.0.2) (2023-09-29)
 
 
