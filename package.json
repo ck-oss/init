@@ -59,11 +59,6 @@
       "@semantic-release/github"
     ]
   },
-  "dependencies": {
-    "@ck-oss/eslint-config": "^3.0.1",
-    "@ck-oss/prettier-config": "^1.0.4",
-    "@ck-oss/tsconfig": "^2.0.0"
-  },
   "devDependencies": {
     "@commitlint/cli": "^17.7.2",
     "@commitlint/config-conventional": "^17.7.0",
@@ -75,6 +70,22 @@
     "lint-staged": "^14.0.1",
     "prettier": "^3.0.3",
     "semantic-release": "^22.0.5"
+  },
+  "peerDependencies": {
+    "@ck-oss/eslint-config": "^3.0.1",
+    "@ck-oss/prettier-config": "^1.0.4",
+    "@ck-oss/tsconfig": "^2.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@ck-oss/eslint-config": {
+      "optional": true
+    },
+    "@ck-oss/prettier-config": {
+      "optional": true
+    },
+    "@ck-oss/tsconfig": {
+      "optional": true
+    }
   },
   "publishConfig": {
     "access": "public"
