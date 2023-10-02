@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/ck-oss/init/compare/v2.0.0...v2.0.1) (2023-10-02)
+
+
+### Bug Fixes
+
+* move deps to peer deps ([44714d8](https://github.com/ck-oss/init/commit/44714d8b61911901659b27e955957f7188d79730))
+
 # [2.0.0](https://github.com/ck-oss/init/compare/v1.0.2...v2.0.0) (2023-10-01)
 
 
